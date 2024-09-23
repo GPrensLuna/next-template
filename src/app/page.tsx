@@ -1,5 +1,5 @@
 const PageHome = (): JSX.Element => {
-  return <div>PageHome</div>;
-};
+  return <div>PageHome</div>
+}
 
-export default PageHome;
+export default PageHome

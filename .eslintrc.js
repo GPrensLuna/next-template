@@ -12,7 +12,9 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
+    'plugin:tailwindcss/recommended',
     'plugin:react/jsx-runtime',
+    'prettier',
   ],
   root: true,
   env: {
@@ -133,7 +135,7 @@ module.exports = {
       },
       {
         selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'], // Variables y constantes
+        format: ['PascalCase', 'UPPER_CASE'], // Variables y constantes
         leadingUnderscore: 'allow',
       },
       {
@@ -173,6 +175,32 @@ module.exports = {
         selector: 'typeProperty',
         format: ['camelCase', 'UPPER_CASE', 'snake_case'], // Propiedades de tipos
         leadingUnderscore: 'allow',
+      },
+    ],
+    'no-magic-numbers': [
+      'warn',
+      {
+        ignore: [0, 1], // Permitir 0 y 1
+        ignoreArrayIndexes: true,
+        enforceConst: true,
+      },
+    ],
+    'consistent-return': 'error', // Asegura que todas las funciones devuelvan un valor o no
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }], // Limitar líneas vacías
+    'prefer-const': 'error', // Preferir const sobre let donde sea posible
+    'react/jsx-boolean-value': ['error', 'never'], // No usar valor booleano en JSX
+    'react/jsx-fragments': ['error', 'syntax'], // Usar fragmentos de JSX
+    'react/jsx-no-bind': ['error', { allowFunctions: true }], // No usar .bind en JSX
+    'import/order': [
+      'error',
+      {
+        groups: [
+          ['builtin', 'external', 'internal'],
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
       },
     ],
   },
