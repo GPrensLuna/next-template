@@ -20,10 +20,10 @@
     "sourceMap": true, // Genera archivos de mapas de fuente
     "baseUrl": "./", // La raíz base para las resoluciones de módulos
     "strictNullChecks": true, // Habilita comprobaciones estrictas para valores nulos y no definidos
-    "noImplicitAny": false, // Permite el tipo implícito 'any'
-    "strictBindCallApply": false, // No habilita la verificación estricta para 'bind', 'call', y 'apply'
-    "forceConsistentCasingInFileNames": false, // No obliga el uso consistente de mayúsculas/minúsculas en los nombres de archivo
-    "noFallthroughCasesInSwitch": false, // No verifica casos sin fallos en las declaraciones switch
+    "noImplicitAny": true, // Permite el tipo implícito 'any'
+    "strictBindCallApply": true, // No habilita la verificación estricta para 'bind', 'call', y 'apply'
+    "forceConsistentCasingInFileNames": true, // No obliga el uso consistente de mayúsculas/minúsculas en los nombres de archivo
+    "noFallthroughCasesInSwitch": true, // No verifica casos sin fallos en las declaraciones switch
     "allowUnreachableCode": false, // No muestra errores para el código inalcanzable
     "allowUnusedLabels": false, // No muestra errores para etiquetas no utilizadas
     "alwaysStrict": true, // Habilita el modo estricto en todos los archivos
@@ -34,6 +34,8 @@
     "strictPropertyInitialization": true, // Habilita la comprobación de inicialización de propiedades
     "noImplicitOverride": true, // Habilita la comprobación para sobreescritura de métodos
     "allowJs": true, // Permite la compilación de archivos JavaScript
+    "noUnusedLocals": true, // enera un error si hay variables locales que no se utilizan en el código. Esto es útil para identificar y eliminar variables que no son necesarias
+    "noUnusedParameters": true, //genera un error si hay parámetros en funciones que no se utilizan.
     "plugins": [
       {
         "name": "next"
