@@ -135,7 +135,7 @@ module.exports = {
       },
       {
         selector: 'variable',
-        format: ['PascalCase', 'UPPER_CASE'], // Variables y constantes
+        format: ['PascalCase', 'UPPER_CASE', 'camelCase'], // Variables y constantes
         leadingUnderscore: 'allow',
       },
       {
